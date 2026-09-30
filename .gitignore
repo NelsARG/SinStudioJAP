@@ -1,0 +1,22 @@
+# Ejecutables y binarios
+*.exe
+*.out
+*.app
+*.o
+*.obj
+
+# Directorios
+/build/
+/bin/
+/dist/
+
+# IDE / Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+#Logs y archivos temporales
+*.log
+temp/
