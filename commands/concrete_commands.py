@@ -179,3 +179,23 @@ class SortDiagnosticsCommand(Command):
         for item in sorted_list:
             output += f" - Linea {item['line']} [{item['severity']}]: {item['msg']}\n"
         return True, output.strip()
+
+class DeleteFileCommand(Command):
+    #Comando para eliminar un archivo de la memoria
+    def __init__(self,file_manager,history_manager):
+        self.file_manager = file_manager
+        self.history_manager = history_manager
+    def execute (self, *args):
+        if not args or not args[0]:
+            return False, "Error: debe especificar el nombre del archivoa eliminar"
+        filename = args[0]
+
+        #Verificar si se esta eliminando el archivo activo para limpiar el historial
+        is_active=(self.file_manager.active_file and self.file_manager.active_file.filename == filename)
+        success, msg = self.file_manager.delete_file(filename)
+        if success and is_active:
+            self.history_manager.clear_history()
+        return succes,msg
+    
+        
+        
