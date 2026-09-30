@@ -2,7 +2,7 @@ from data_structures.node import Node
 
 
 class Queue:
-    # Estructura FIFO para el buffer de peticiones a la IA
+    #estructura FIFO para el buffer de peticiones a la IA
     def __init__(self):
         self.front_node = None
         self.rear_node = None
