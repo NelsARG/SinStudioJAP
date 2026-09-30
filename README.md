@@ -35,7 +35,7 @@ Gestiona la cola FIFO de peticiones de analisis hacia la API externa y simula la
 core config_loader.py
 Carga la configuracion externa del entorno y la clave API key desde el archivo config.json garantizando seguridad.
 
-# Patrones de Diseno y Capa de Comandos
+# Patrones de Diseño y Capa de Comandos
 
 El proyecto implementa el Patron de Diseno Command para evitar el uso de menus CLI tradicionales basados en opciones numericas.
 
@@ -45,29 +45,6 @@ Define la interfaz abstracta Command y la clase CommandInvoker encargada de regi
 commands concrete_commands.py
 Implementa los comandos concretos para crear archivos, listar, cambiar de archivo activo, editar codigo, validar sintaxis, deshacer, rehacer, encolar peticiones de IA, procesar la cola y ordenar diagnosticos.
 
-# Requisitos de Instalacion y Ejecucion
-
-Python version 3.8 o superior instalado en el sistema.
-No se requieren dependencias de terceros ni librerias externas.
-
-# Instrucciones de Uso
-
-Paso 1
-Clonar el repositorio o descargar el codigo fuente en su equipo local.
-
-Paso 2
-Crear el archivo config.json en la raiz del proyecto con la estructura siguiente.
-
-{
-  "api_endpoint": "https://api.synthetix.ai/v1/analyze",
-  "api_key": "SU_CLAVE_API_AQUI",
-  "timeout": 30
-}
-
-Paso 3
-Abrir una terminal en el directorio del proyecto y ejecutar el punto de entrada principal.
-
-python main.py
 
 # Comandos Disponibles en la CLI
 
