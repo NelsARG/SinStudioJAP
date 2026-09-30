@@ -1,1 +1,5 @@
-
+{
+  "api_endpoint": "https://api.synthetix.ai/v1/analyze",
+  "api_key": "AIzaSyAipqpV9Lx4U5ZVs0LJRTE3Xn5MrRd-sss",
+  "timeout": 30
+}
