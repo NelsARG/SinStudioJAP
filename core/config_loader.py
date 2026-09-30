@@ -22,7 +22,7 @@ class ConfigLoader:
                 return json.load(f)
         except Exception:
             return {
-                "api_endpoint": "https://api.synthetix.ai/v1/analyze",
+                "api_endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
                 "api_key": "AIzaSyAipqpV9Lx4U5ZVs0LJRTE3Xn5MrRd-sss",
                 "timeout": 30
             }
