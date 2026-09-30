@@ -6,7 +6,7 @@ from core.history_manager import HistoryManager
 from core.sorting_engine import SortingEngine
 from core.ia_manager import IAManager
 from commands.command_base import CommandInvoker
-from commands.concrete_commands import (CreateFileCommand, ListFilesCommand, SwitchFileCommand, WriteCodeCommand, CheckSyntaxCommand, UndoCommand,RedoCommand,AnalyzeIACommand,ProcessIACommand,SortDiagnosticsCommand)
+from commands.concrete_commands import (CreateFileCommand,DeleteFileCommand, ListFilesCommand, SwitchFileCommand, WriteCodeCommand, CheckSyntaxCommand, UndoCommand,RedoCommand,AnalyzeIACommand,ProcessIACommand,SortDiagnosticsCommand)
 
 
 def print_help():
@@ -20,6 +20,7 @@ Comandos de Archivos:
   list                         Lista todos los archivos abiertos
   switch <nombre>              Cambia el archivo activo actual
   write <texto>                Escribe o actualiza texto en el archivo activo
+  delete <nombre>              Borra el archivp de la memoria
 
 Comandos de Analisis y Edicion:
   check                        Valida delimitadores ({[],()}) con Pila LIFO
@@ -65,6 +66,7 @@ def main():
     invoker.register_command("analyze", AnalyzeIACommand(file_mgr, ia_mgr))
     invoker.register_command("process", ProcessIACommand(ia_mgr))
     invoker.register_command("sort", SortDiagnosticsCommand(sort_engine))
+    invoker.register_command("delete",DeleteFileCommand(file_mgr,history_mgr))
 
     print("Bienvenido a Synthetix Studio CLI Mini IDE.")
     print("Digite 'help' para ver los comandos disponibles o 'exit' para salir.\n")
