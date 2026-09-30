@@ -27,5 +27,4 @@ En cumplimiento estricto con los requerimientos del proyecto, no se utilizaron e
 - Python 3.8 o superior instalado.
 
 
-Autor
-Nombre: Nelson Rodriguez
+Autor: Nelson Rodriguez
