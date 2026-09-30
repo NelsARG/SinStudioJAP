@@ -6,18 +6,7 @@ from core.history_manager import HistoryManager
 from core.sorting_engine import SortingEngine
 from core.ia_manager import IAManager
 from commands.command_base import CommandInvoker
-from commands.concrete_commands import (
-    CreateFileCommand,
-    ListFilesCommand,
-    SwitchFileCommand,
-    WriteCodeCommand,
-    CheckSyntaxCommand,
-    UndoCommand,
-    RedoCommand,
-    AnalyzeIACommand,
-    ProcessIACommand,
-    SortDiagnosticsCommand
-)
+from commands.concrete_commands import (CreateFileCommand, ListFilesCommand, SwitchFileCommand, WriteCodeCommand, CheckSyntaxCommand, UndoCommand,RedoCommand,AnalyzeIACommand,ProcessIACommand,SortDiagnosticsCommand)
 
 
 def print_help():
