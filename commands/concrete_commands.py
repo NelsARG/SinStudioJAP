@@ -195,7 +195,7 @@ class DeleteFileCommand(Command):
         success, msg = self.file_manager.delete_file(filename)
         if success and is_active:
             self.history_manager.clear_history()
-        return succes,msg
+        return success,msg
     
         
         
